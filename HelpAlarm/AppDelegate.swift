@@ -33,17 +33,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let filename = "raid"
         let ext = "m4a"
         
-        if let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext) {
+        let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext)
             var soundId: SystemSoundID = 0
             
-            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+            AudioServicesCreateSystemSoundID(soundUrl as! CFURL, &soundId)
             
             AudioServicesAddSystemSoundCompletion(soundId, nil, nil, { (soundId, clientData) -> Void in
                 AudioServicesDisposeSystemSoundID(soundId)
             }, nil)
             
             AudioServicesPlaySystemSound(soundId)
-        }
+            
+        
+        
+//        if let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext) {
+//            var soundId: SystemSoundID = 0
+//            
+//            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+//            
+//            AudioServicesAddSystemSoundCompletion(soundId, nil, nil, { (soundId, clientData) -> Void in
+//                AudioServicesDisposeSystemSoundID(soundId)
+//            }, nil)
+//            
+//            AudioServicesPlaySystemSound(soundId)
+//
+//        }
         
         guard let number = URL(string: "tel://6032304000") else { return }
         if #available(iOS 10.0, *) {
@@ -67,20 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         start()
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        let volumeView = MPVolumeView()
-        if let view = volumeView.subviews.first as? UISlider {
-            //set system volume to max level
-            view.value = 1.0
-        }
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
 
 }
 
