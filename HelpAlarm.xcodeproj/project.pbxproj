@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D39B31641F1D715800757413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B31631F1D715800757413 /* AppDelegate.swift */; };
 		D39B31661F1D715800757413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B31651F1D715800757413 /* ViewController.swift */; };
 		D39B31691F1D715800757413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39B31671F1D715800757413 /* Main.storyboard */; };
 		D39B316B1F1D715800757413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39B316A1F1D715800757413 /* Assets.xcassets */; };
 		D39B316E1F1D715800757413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39B316C1F1D715800757413 /* LaunchScreen.storyboard */; };
 		D39B31791F1D715800757413 /* HelpAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B31781F1D715800757413 /* HelpAlarmTests.swift */; };
 		D39B31841F1D715800757413 /* HelpAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B31831F1D715800757413 /* HelpAlarmUITests.swift */; };
+		D39B31921F1D728D00757413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39B31911F1D728D00757413 /* AppDelegate.swift */; };
+		D39B319E1F1D955A00757413 /* raid.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D39B319D1F1D955A00757413 /* raid.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		D39B31601F1D715800757413 /* HelpAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D39B31631F1D715800757413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D39B31651F1D715800757413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D39B31681F1D715800757413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D39B316A1F1D715800757413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		D39B317F1F1D715800757413 /* HelpAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39B31831F1D715800757413 /* HelpAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAlarmUITests.swift; sourceTree = "<group>"; };
 		D39B31851F1D715800757413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39B31911F1D728D00757413 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D39B319D1F1D955A00757413 /* raid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raid.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		D39B31621F1D715800757413 /* HelpAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				D39B31631F1D715800757413 /* AppDelegate.swift */,
 				D39B31651F1D715800757413 /* ViewController.swift */,
+				D39B31911F1D728D00757413 /* AppDelegate.swift */,
 				D39B31671F1D715800757413 /* Main.storyboard */,
+				D39B319D1F1D955A00757413 /* raid.m4a */,
 				D39B316A1F1D715800757413 /* Assets.xcassets */,
 				D39B316C1F1D715800757413 /* LaunchScreen.storyboard */,
 				D39B316F1F1D715800757413 /* Info.plist */,
@@ -237,6 +240,7 @@
 			files = (
 				D39B316E1F1D715800757413 /* LaunchScreen.storyboard in Resources */,
 				D39B316B1F1D715800757413 /* Assets.xcassets in Resources */,
+				D39B319E1F1D955A00757413 /* raid.m4a in Resources */,
 				D39B31691F1D715800757413 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39B31921F1D728D00757413 /* AppDelegate.swift in Sources */,
 				D39B31661F1D715800757413 /* ViewController.swift in Sources */,
-				D39B31641F1D715800757413 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HH67VPFP9E;
 				INFOPLIST_FILE = HelpAlarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fleury.HelpAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HH67VPFP9E;
 				INFOPLIST_FILE = HelpAlarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fleury.HelpAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
